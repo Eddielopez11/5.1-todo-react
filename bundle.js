@@ -21434,32 +21434,7 @@
 	    var todoValue = this.refs.myTodoInput.value;
 	    if (todoValue.length > 2) {
 	      var tdListElement = this.refs.todoList;
-	      var todoItemTemp = _react2.default.createElement(
-	        "li",
-	        { className: "listUnderline" },
-	        _react2.default.createElement(
-	          "div",
-	          { className: "circleOutline",
-	            "data-js": "itemComplete" },
-	          _react2.default.createElement(
-	            "span",
-	            { className: "checkMark" },
-	            "✓"
-	          )
-	        ),
-	        _react2.default.createElement(
-	          "p",
-	          { className: "todo__item",
-	            "data-js": "todo__item" },
-	          this.refs.todoList.value()
-	        ),
-	        _react2.default.createElement(
-	          "mark",
-	          { className: "todo__itemDelete",
-	            "data-js": "todo__itemDelete" },
-	          "X"
-	        )
-	      );
+	      var todoItemTemp = "\n        <li class=\"listUnderline\">\n        <div class=\"circleOutline\"\n           data-js=\"itemComplete\">\n        <span class=\"checkMark\">\n           &#10003;\n        </span>\n        </div>\n        <p class=\"todo__item\"\n          data-js=\"todo__item\">\n          " + this.refs.myTodoInput.value + "\n        </p>\n        <mark class=\"todo__itemDelete\"\n            data-js=\"todo__itemDelete\">\n            X\n        </mark>\n        </li>";
 	      tdListElement.innerHTML += todoItemTemp;
 	    }
 	  },
